@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Mensajes</title>
+    <style>
+        body {
+            background: linear-gradient(to right, rgb(251, 193, 233), #bb51d0);
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Cambiado a flex-start para permitir desplazamiento */
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            overflow-y: auto; /* Agregado para permitir desplazamiento vertical */
+        }
+
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 20px 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            width: 100%;
+            margin: 20px 0; /* Agregado para dar espacio en la parte superior e inferior */
+        }
+
+        .photo-space {
+            margin: 20px 0;
+            padding: 10px;
+            border: 2px dashed #bb51d0;
+            border-radius: 10px;
+            background-color: #f7d6f3;
+        }
+
+        .photo-space img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .photo-space p {
+            color: #bb51d0;
+            margin: 10px 0 0 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="photo-space">
+            <img src="/img/captura1.png" alt="Foto de Mensaje 1">
+            <p>Facto</p>
+        </div>
+        <div class="photo-space">
+            <img src="/img/captura2.png" alt="Foto de Mensaje 2">
+            <p>La vd sí</p>
+        </div>
+        <div class="photo-space">
+            <img src="/img/captura3.2.png" alt="Foto de Mensaje 3">
+            <p>Este no estaba fijado pero yo lo elegí pq de vd me gusta eso</p>
+        </div>
+        <div class="photo-space">
+            <img src="/img/captura4.png" alt="Foto de Mensaje 4">
+            <p>Ojo que este si estaba fijado eh</p>
+        </div>
+        <div class="photo-space">
+            <img src="/img/captura5.png" alt="Foto de Mensaje 5">
+            <p>...</p>
+        </div>
+        <div class="photo-space">
+            <img src="/img/captura6.png" alt="Foto de Mensaje 6">
+            <p>Bro, no puedo creer q haya dicho todo eso</p>
+        </div>
+    </div>
+</body>
+</html>

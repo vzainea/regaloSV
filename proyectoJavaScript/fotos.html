@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Fotos</title>
+    <style>
+        body {
+            background: linear-gradient(to right, rgb(251, 193, 233), #bb51d0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .slider {
+            position: relative;
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .slides {
+            display: none;
+        }
+
+        .arrow {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.3s;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .arrow:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .prev {
+            left: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 0 3px 3px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <img class="slides" src="/img/falda.jpg" style="width:100%">
+        <img class="slides" src="/img/topVerde.jpg" style="width:100%">
+        <img class="slides" src="/img/vestidoNegro.jpg" style="width:80%"> <!-- Ajuste de tamaño -->
+        <img class="slides" src="/img/escoteee.jpg" style="width:100%"> <!-- Nueva imagen -->
+        <img class="slides" src="/img/video2.png" style="width:100%"> <!-- Nueva imagen -->
+        <img class="slides" src="/img/sinso.png" style="width:100%"> <!-- Nueva imagen -->
+
+        <a class="arrow prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="arrow next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("slides");
+            if (n >= slides.length) {
+                slideIndex = 0;
+            } else if (n < 0) {
+                slideIndex = slides.length - 1;
+            } else {
+                slideIndex = n;
+            }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex].style.display = "block";
+        }
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        showSlides(slideIndex);
+    </script>
+</body>
+</html>
